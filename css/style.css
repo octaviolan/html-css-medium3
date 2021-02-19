@@ -1,6 +1,7 @@
 :root {
   font-size: 18px;
   --white: #FFFFFF;
+  --grayLight: #E5E5E5;
   --gray: #616161;
   --blackLight: #424242;
   --black: #212121;
@@ -95,18 +96,22 @@ h2 {
   color: var(--black);
 }
 
+h3::before {
+  content: "1."
+}
+
 .setup img {
   display: block;
 }
 
-h3 {
+.setup h3 {
   margin-block: 16px;
   font-size: 24px;
   font-weight: 400;
   color: var(--blackLight);
 }
 
-p {
+.setup p, .conceptos-esenciales p {
   margin-block-start: 0;
   margin-block-end: 40px;
   font-size: 16px;
@@ -134,5 +139,38 @@ blockquote p:first-child {
 
 blockquote p:last-child {
   color: var(--gray);
+}
+
+#html, #etiquetas, #dom, #semantica, #atributos, #css {
+  margin-block-end: 40px;
+}
+
+.conceptos-esenciales h3{
+  margin-block-start: 0;
+  margin-block-end: 16px;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--blackLight);
+}
+
+.conceptos-esenciales p {
+  margin-block-end: 16px;
+}
+
+pre {
+  margin-block: 0;
+  padding-inline: 40px;
+  padding-block: 40px;
+  background: var(--grayLight);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: var(--blackLight);
+  line-height: 24px;
+  border: none;
+  border-radius: 8px;
+}
+
+.conceptos-esenciales img {
+  max-inline-size: 100%;
 }
 
