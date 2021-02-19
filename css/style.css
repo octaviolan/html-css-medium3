@@ -96,22 +96,20 @@ h2 {
   color: var(--black);
 }
 
-h3::before {
-  content: "1."
-}
-
 .setup img {
   display: block;
 }
 
-.setup h3 {
+.setup h3,
+.box-model h3 {
   margin-block: 16px;
   font-size: 24px;
   font-weight: 400;
   color: var(--blackLight);
+  counter-increment: titleList;
 }
 
-.setup p, .conceptos-esenciales p {
+.setup p, .conceptos-esenciales p, .box-model p {
   margin-block-start: 0;
   margin-block-end: 40px;
   font-size: 16px;
@@ -151,7 +149,9 @@ blockquote p:last-child {
   font-size: 24px;
   font-weight: 400;
   color: var(--blackLight);
+  counter-increment: titleList;
 }
+
 
 .conceptos-esenciales p {
   margin-block-end: 16px;
@@ -168,9 +168,55 @@ pre {
   line-height: 24px;
   border: none;
   border-radius: 8px;
+  overflow: auto;
 }
 
 .conceptos-esenciales img {
   max-inline-size: 100%;
 }
+
+.conceptos-esenciales {
+  counter-reset: titleList;
+}
+
+.setup h3::before,
+.conceptos-esenciales h3::before {
+  content: counter(titleList)'. ';
+}
+
+.content-boxModel,
+.content-propiedadesFisicas,
+.content-propiedadesLogicas {
+  /* border: 1px solid red; */
+  margin-block-start: 0;
+  margin-block-end: 40px;
+}
+
+.content-boxModel h3,
+.content-propiedadesFisicas h3,
+.content-propiedadesLogicas h3 {
+  margin-block-start: 0;
+}
+
+.box-model p {
+  margin-block: 16px;
+}
+
+.box-model ol, .box-model ul {
+  margin-block: 0;
+  padding-inline-start: 15px;
+}
+
+.box-model ol li, .box-model ul li{
+  font-size: 16px;
+  color: var(--blackLight);
+  margin-block-end: 16px;
+  line-height: 24px;
+}
+
+.box-model ol li {
+  margin-block-end: 6px;
+}
+
+
 
