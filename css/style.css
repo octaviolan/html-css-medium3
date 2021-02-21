@@ -242,6 +242,7 @@ pre {
 .slider-bullet-list {
   margin-block-start: 16px;
   text-align: center;
+  line-height: 0;
 }
 
 .slider-bullet-list a{
@@ -257,5 +258,75 @@ pre {
   background-color: var(--black);
 }
 
+.e-mail {
+  margin-block: 40px;
+}
+
+.e-mail p {
+  margin-block: 0;
+  font-size: 16px;
+  color: var(--black);
+}
+
+.e-mail a {
+  color: black;
+}
+
+.newsletter p {
+  font-size: 24px;
+  color: var(--blackLight);
+  line-height: 28px;
+  margin-block-start: 0;
+  margin-block-end: 16px;
+}
+
+.form {
+  font-size: 0;
+}
+
+input[type="text"],
+input[type="email"] {
+  border: 1px solid var(--gray);
+  inline-size: 280px;
+  block-size: 48px;
+  border-radius: 90px;
+  padding-block: 12px;
+  padding-inline: 16px;
+  box-sizing: border-box;
+  color: var(--black);
+  font-size: 16px;
+}
+
+input[type="text"] {
+  margin-inline-end: 16px;
+}
+
+.form input::-webkit-input-placeholder {
+  color: var(--blackLight);
+}
+
+.position {
+  display: inline-block;
+  position: relative;
+  /* border: 1px solid red; */
+  /* overflow: hidden; */
+  inline-size: 337px;
+}
+
+.form input[type="submit"] {
+  inline-size: 119px;
+  block-size: 48px;
+  border-radius: 90px;
+  border: none;
+  background: #000000;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 16px;
+  padding-block: 12px;
+  padding-inline: 16px;
+  box-sizing: border-box;
+  position: absolute;
+  inset-inline-end: 0;
+}
 
 
