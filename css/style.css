@@ -7,6 +7,10 @@
   --black: #212121;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -216,6 +220,41 @@ pre {
 
 .box-model ol li {
   margin-block-end: 6px;
+}
+
+.slider-container {
+  /* border: 1px solid blue; */
+  /* block-size: 300px; */
+  display: block;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+}
+
+.slider-slide iframe {
+  /* block-size: 100px; */
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.slider-bullet-list {
+  margin-block-start: 16px;
+  text-align: center;
+}
+
+.slider-bullet-list a{
+  display: inline-block;
+  block-size: 16px;
+  inline-size: 16px;
+  background: rgba(66, 66, 66, 0.2);
+  border-radius: 50%;
+  margin-inline-end: 8px;
+}
+
+.slider-bullet-list a:hover {
+  background-color: var(--black);
 }
 
 
